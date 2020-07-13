@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.FlwRam = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FlwRam
@@ -40,11 +41,21 @@
             this.FlwRam.Size = new System.Drawing.Size(514, 514);
             this.FlwRam.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(362, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // FrmAssembler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 632);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.FlwRam);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -52,12 +63,14 @@
             this.Text = "Pseudo Eight Bit Assembler   by   Joseph Fischetti";
             this.Load += new System.EventHandler(this.FrmAssembler_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel FlwRam;
+        private System.Windows.Forms.Label label1;
     }
 }
 

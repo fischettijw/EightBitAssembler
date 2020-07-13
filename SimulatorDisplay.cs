@@ -13,7 +13,7 @@ namespace EightBitAssembler
 
         private FlowLayoutPanel ramPanel;
         private int ramAddress;
-
+        private string tempText;
         private byte[] ramValue = new byte[256];
         private Label[] LblAddress = new Label[256];
 
@@ -56,23 +56,32 @@ namespace EightBitAssembler
                 LblAddress[nAddress].Size = new Size(addressWidth, addressHeight);
                 LblAddress[nAddress].Margin = new Padding(0);
                 LblAddress[nAddress].Font = new Font("Courier New", 14);
-                LblAddress[nAddress].Text = (ramValue[nAddress] < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(ramValue[nAddress]), 16).ToUpper();
+                LblAddress[nAddress].ForeColor = Color.Black;
+                LblAddress[nAddress].Text = (ramValue[nAddress] < 16 ? "0" : "") +
+                                            Convert.ToString(Convert.ToByte(ramValue[nAddress]), 16).ToUpper();
                 LblAddress[nAddress].Text = "00";
                 LblAddress[nAddress].TextAlign = ContentAlignment.MiddleCenter;
                 LblAddress[nAddress].Tag = nAddress;
                 RamPanel.Controls.Add(LblAddress[nAddress]);
-                LblAddress[nAddress].MouseHover += new EventHandler(hoover);
+                LblAddress[nAddress].Click += new EventHandler(click);
+
             }
         }
 
-        private void hoover(object sender, EventArgs e)
+        private void click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
-            lbl.ForeColor = Color.Red;
-            lbl.Text = lbl.Tag.ToString();
-            lbl.Text = (Convert.ToInt32(lbl.Tag) < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(Convert.ToInt32(lbl.Tag)), 16).ToUpper();
+            if (lbl.ForeColor == Color.Black)
+            {
+                tempText = lbl.Text;
+                lbl.ForeColor = Color.Red;
+                lbl.Text = (Convert.ToInt32(lbl.Tag) < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(Convert.ToInt32(lbl.Tag)), 16).ToUpper();
+            }
+            else
+            {
+                lbl.Text = tempText;
+                lbl.ForeColor = Color.Black;
+            }
         }
-
-
     }
 }
