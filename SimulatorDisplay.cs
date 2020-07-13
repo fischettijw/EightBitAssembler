@@ -44,6 +44,7 @@ namespace EightBitAssembler
 
         private void CreateRamDisplay()
         {
+            string s = "0";
             int addressWidth = RamPanel.ClientSize.Width / 16;
             int addressHeight = RamPanel.ClientSize.Height / 16;
 
@@ -54,8 +55,8 @@ namespace EightBitAssembler
                 LblAddress[n].AutoSize = false;
                 LblAddress[n].Size = new Size(addressWidth, addressHeight);
                 LblAddress[n].Margin = new Padding(0);
-                LblAddress[n].Text = Convert.ToString(Convert.ToByte(ramValue[n]), 16).ToUpper();
-                LblAddress[n].Text = Convert.ToString(Convert.ToByte(ramValue[n]), 16).ToUpper().ToString();
+                LblAddress[n].Font = new Font("Courier New", 12);
+                LblAddress[n].Text = (n < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(ramValue[n]), 16).ToUpper();
                 LblAddress[n].TextAlign = ContentAlignment.MiddleCenter;
                 RamPanel.Controls.Add(LblAddress[n]);
             }
