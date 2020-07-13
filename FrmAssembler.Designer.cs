@@ -35,16 +35,16 @@
             // 
             this.FlwRam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FlwRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.FlwRam.Location = new System.Drawing.Point(29, 101);
+            this.FlwRam.Location = new System.Drawing.Point(21, 101);
             this.FlwRam.Name = "FlwRam";
-            this.FlwRam.Size = new System.Drawing.Size(498, 498);
+            this.FlwRam.Size = new System.Drawing.Size(514, 514);
             this.FlwRam.TabIndex = 0;
             // 
             // FrmAssembler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 616);
+            this.ClientSize = new System.Drawing.Size(556, 632);
             this.Controls.Add(this.FlwRam);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);

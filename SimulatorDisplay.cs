@@ -13,6 +13,7 @@ namespace EightBitAssembler
 
         private FlowLayoutPanel ramPanel;
         private int ramAddress;
+
         private byte[] ramValue = new byte[256];
         private Label[] LblAddress = new Label[256];
 
@@ -31,10 +32,10 @@ namespace EightBitAssembler
         public SimulatorDisplay(FlowLayoutPanel _ramPanel)
         {
             RamPanel = _ramPanel;
-            InitializeRam(0);
+            InitializeRam();
             CreateRamDisplay();
         }
-        private void InitializeRam(int initializeValue)
+        private void InitializeRam()
         {
             for (int n = 0; n < ramValue.Length; n++)
             {
@@ -44,23 +45,34 @@ namespace EightBitAssembler
 
         private void CreateRamDisplay()
         {
-            string s = "0";
             int addressWidth = RamPanel.ClientSize.Width / 16;
             int addressHeight = RamPanel.ClientSize.Height / 16;
 
-            for (int n = 0; n < ramValue.Length; n++)
+            for (int nAddress = 0; nAddress < ramValue.Length; nAddress++)
             {
-                LblAddress[n] = new Label();
-                LblAddress[n].Location = new Point(addressWidth * n % 16, addressHeight * n % 16);
-                LblAddress[n].AutoSize = false;
-                LblAddress[n].Size = new Size(addressWidth, addressHeight);
-                LblAddress[n].Margin = new Padding(0);
-                LblAddress[n].Font = new Font("Courier New", 12);
-                LblAddress[n].Text = (n < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(ramValue[n]), 16).ToUpper();
-                LblAddress[n].TextAlign = ContentAlignment.MiddleCenter;
-                RamPanel.Controls.Add(LblAddress[n]);
+                LblAddress[nAddress] = new Label();
+                LblAddress[nAddress].Location = new Point(addressWidth * nAddress % 16, addressHeight * nAddress % 16);
+                LblAddress[nAddress].AutoSize = false;
+                LblAddress[nAddress].Size = new Size(addressWidth, addressHeight);
+                LblAddress[nAddress].Margin = new Padding(0);
+                LblAddress[nAddress].Font = new Font("Courier New", 14);
+                LblAddress[nAddress].Text = (ramValue[nAddress] < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(ramValue[nAddress]), 16).ToUpper();
+                LblAddress[nAddress].Text = "00";
+                LblAddress[nAddress].TextAlign = ContentAlignment.MiddleCenter;
+                LblAddress[nAddress].Tag = nAddress;
+                RamPanel.Controls.Add(LblAddress[nAddress]);
+                LblAddress[nAddress].MouseHover += new EventHandler(hoover);
             }
         }
+
+        private void hoover(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+            lbl.ForeColor = Color.Red;
+            lbl.Text = lbl.Tag.ToString();
+            lbl.Text = (Convert.ToInt32(lbl.Tag) < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(Convert.ToInt32(lbl.Tag)), 16).ToUpper();
+        }
+
 
     }
 }
