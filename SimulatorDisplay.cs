@@ -64,8 +64,16 @@ namespace EightBitAssembler
                 LblAddress[nAddress].Tag = nAddress;
                 RamPanel.Controls.Add(LblAddress[nAddress]);
                 LblAddress[nAddress].Click += new EventHandler(click);
+                LblAddress[nAddress].MouseHover += new EventHandler(hoover);
 
             }
+        }
+
+        private void hoover(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender;
+            lbl.ForeColor = Color.Green;
+            lbl.Text = Convert.ToChar(lbl.Tag).ToString();
         }
 
         private void click(object sender, EventArgs e)
