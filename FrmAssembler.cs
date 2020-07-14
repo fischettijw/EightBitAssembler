@@ -25,7 +25,7 @@ namespace EightBitAssembler
 
         private void BtnSet32_Click(object sender, EventArgs e)
         {
-            SimDisplay.SetRamValue(32, "64");
+            SimDisplay.SetRamValue(32, "44");
         }
 
         private void BtnGet32_Click(object sender, EventArgs e)

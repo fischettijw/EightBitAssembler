@@ -11,26 +11,20 @@ namespace EightBitAssembler
     class SimulatorDisplay
     {
         private FlowLayoutPanel ramPanel;
-        private int ramAddress;
+        //private int ramAddress;
         private string tempText;
         private byte[] ramValue = new byte[256];
         private Label[] LblAddress = new Label[256];
 
-        public FlowLayoutPanel RamPanel
-        {
-            get { return ramPanel; }
-            set { ramPanel = value; }
-        }
+        //public int RamAddress
+        //{
+        //    get { return ramAddress; }
+        //    set { ramAddress = value; }
+        //}
 
-        public int RamAddress
+        public SimulatorDisplay(FlowLayoutPanel userRamPanel)
         {
-            get { return ramAddress; }
-            set { ramAddress = value; }
-        }
-
-        public SimulatorDisplay(FlowLayoutPanel _ramPanel)
-        {
-            RamPanel = _ramPanel;
+            ramPanel = userRamPanel;
             InitializeRam();
             CreateRamDisplay();
         }
@@ -45,8 +39,8 @@ namespace EightBitAssembler
 
         private void CreateRamDisplay()
         {
-            int addressWidth = RamPanel.ClientSize.Width / 16;
-            int addressHeight = RamPanel.ClientSize.Height / 16;
+            int addressWidth = ramPanel.ClientSize.Width / 16;
+            int addressHeight = ramPanel.ClientSize.Height / 16;
 
             for (int nAddress = 0; nAddress < ramValue.Length; nAddress++)
             {
@@ -64,7 +58,7 @@ namespace EightBitAssembler
 
                 LblAddress[nAddress].TextAlign = ContentAlignment.MiddleCenter;
                 LblAddress[nAddress].Tag = nAddress;
-                RamPanel.Controls.Add(LblAddress[nAddress]);
+                ramPanel.Controls.Add(LblAddress[nAddress]);
                 LblAddress[nAddress].MouseDown += new MouseEventHandler(MouseDown);
                 LblAddress[nAddress].MouseUp += new MouseEventHandler(MouseUp);
             }
@@ -84,12 +78,14 @@ namespace EightBitAssembler
             if (e.Button == MouseButtons.Left)
             {
                 lbl.ForeColor = Color.Green;
-                lbl.Text = Convert.ToChar(lbl.Tag).ToString();
+                lbl.Text = Convert.ToChar(Convert.ToUInt64(lbl.Text, 16)).ToString();
+                //lbl.Text = Convert.ToChar(lbl.Tag).ToString();
             }
             else
             {
                 lbl.ForeColor = Color.Red;
                 lbl.Text = (Convert.ToInt32(lbl.Tag) < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(Convert.ToInt32(lbl.Tag)), 16).ToUpper();
+
             }
         }
 

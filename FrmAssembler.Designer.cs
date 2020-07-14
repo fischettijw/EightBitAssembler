@@ -44,7 +44,7 @@
             // 
             // BtnSet32
             // 
-            this.BtnSet32.Location = new System.Drawing.Point(185, 36);
+            this.BtnSet32.Location = new System.Drawing.Point(190, 36);
             this.BtnSet32.Name = "BtnSet32";
             this.BtnSet32.Size = new System.Drawing.Size(75, 23);
             this.BtnSet32.TabIndex = 1;
