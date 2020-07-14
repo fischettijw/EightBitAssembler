@@ -78,7 +78,7 @@ namespace EightBitAssembler
             if (e.Button == MouseButtons.Left)
             {
                 lbl.ForeColor = Color.Green;
-                lbl.Text = Convert.ToChar(Convert.ToUInt64(lbl.Text, 16)).ToString();
+                lbl.Text = Convert.ToChar(Convert.ToInt32(lbl.Text, 16)).ToString();
                 //lbl.Text = Convert.ToChar(lbl.Tag).ToString();
             }
             else
