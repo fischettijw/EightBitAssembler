@@ -23,9 +23,9 @@ namespace EightBitAssembler
             SimDisplay = new SimulatorDisplay(FlwRam);
         }
 
-        private void BtnSet32_Click(object sender, EventArgs e)
+        private void BtnSet_Click(object sender, EventArgs e)
         {
-            SimDisplay.SetRamValue(32, "44");
+            SimDisplay.SetRamValue(Convert.ToInt32(TxtSetAddress.Text), TxtSetValue.Text);
             LblValveA.Text = "0A";
             LblValveB.Text = "0B";
             LblValveC.Text = "0C";
@@ -37,9 +37,12 @@ namespace EightBitAssembler
             LblFlagF.Text = "True";
         }
 
-        private void BtnGet32_Click(object sender, EventArgs e)
+        private void BtnGet_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(SimDisplay.GetRamValue(32));
+            TxtGetValue.Text = SimDisplay.GetRamValue(Convert.ToInt32(TxtGetAddress.Text)).ToString();
+
         }
+
+
     }
 }

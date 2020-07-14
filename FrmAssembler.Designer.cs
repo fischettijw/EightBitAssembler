@@ -29,21 +29,10 @@
         private void InitializeComponent()
         {
             this.FlwRam = new System.Windows.Forms.FlowLayoutPanel();
-            this.BtnSet32 = new System.Windows.Forms.Button();
-            this.BtnGet32 = new System.Windows.Forms.Button();
+            this.BtnSet = new System.Windows.Forms.Button();
+            this.BtnGet = new System.Windows.Forms.Button();
             this.LblRamTitle = new System.Windows.Forms.Label();
             this.PnlRegisters = new System.Windows.Forms.Panel();
-            this.LblRegistersTitle = new System.Windows.Forms.Label();
-            this.PnlRegisterValues = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.LblD = new System.Windows.Forms.Label();
-            this.LblC = new System.Windows.Forms.Label();
-            this.LblB = new System.Windows.Forms.Label();
-            this.LblA = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.LblValveB = new System.Windows.Forms.Label();
             this.LblValveA = new System.Windows.Forms.Label();
             this.LblValveC = new System.Windows.Forms.Label();
@@ -52,7 +41,22 @@
             this.LblValveSP = new System.Windows.Forms.Label();
             this.LblFlagF = new System.Windows.Forms.Label();
             this.LblFlagZ = new System.Windows.Forms.Label();
+            this.LblB = new System.Windows.Forms.Label();
+            this.LblA = new System.Windows.Forms.Label();
+            this.LblC = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LblD = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PnlRegisterValues = new System.Windows.Forms.Panel();
             this.LblFlagC = new System.Windows.Forms.Label();
+            this.LblRegistersTitle = new System.Windows.Forms.Label();
+            this.TxtSetAddress = new System.Windows.Forms.TextBox();
+            this.TxtSetValue = new System.Windows.Forms.TextBox();
+            this.TxtGetValue = new System.Windows.Forms.TextBox();
+            this.TxtGetAddress = new System.Windows.Forms.TextBox();
             this.PnlRegisters.SuspendLayout();
             this.PnlRegisterValues.SuspendLayout();
             this.SuspendLayout();
@@ -66,25 +70,25 @@
             this.FlwRam.Size = new System.Drawing.Size(514, 514);
             this.FlwRam.TabIndex = 0;
             // 
-            // BtnSet32
+            // BtnSet
             // 
-            this.BtnSet32.Location = new System.Drawing.Point(192, 6);
-            this.BtnSet32.Name = "BtnSet32";
-            this.BtnSet32.Size = new System.Drawing.Size(75, 23);
-            this.BtnSet32.TabIndex = 1;
-            this.BtnSet32.Text = "SET - 32";
-            this.BtnSet32.UseVisualStyleBackColor = true;
-            this.BtnSet32.Click += new System.EventHandler(this.BtnSet32_Click);
+            this.BtnSet.Location = new System.Drawing.Point(561, 356);
+            this.BtnSet.Name = "BtnSet";
+            this.BtnSet.Size = new System.Drawing.Size(75, 23);
+            this.BtnSet.TabIndex = 1;
+            this.BtnSet.Text = "SET";
+            this.BtnSet.UseVisualStyleBackColor = true;
+            this.BtnSet.Click += new System.EventHandler(this.BtnSet_Click);
             // 
-            // BtnGet32
+            // BtnGet
             // 
-            this.BtnGet32.Location = new System.Drawing.Point(355, 3);
-            this.BtnGet32.Name = "BtnGet32";
-            this.BtnGet32.Size = new System.Drawing.Size(75, 23);
-            this.BtnGet32.TabIndex = 2;
-            this.BtnGet32.Text = "GET - 32";
-            this.BtnGet32.UseVisualStyleBackColor = true;
-            this.BtnGet32.Click += new System.EventHandler(this.BtnGet32_Click);
+            this.BtnGet.Location = new System.Drawing.Point(668, 356);
+            this.BtnGet.Name = "BtnGet";
+            this.BtnGet.Size = new System.Drawing.Size(75, 23);
+            this.BtnGet.TabIndex = 2;
+            this.BtnGet.Text = "GET";
+            this.BtnGet.UseVisualStyleBackColor = true;
+            this.BtnGet.Click += new System.EventHandler(this.BtnGet_Click);
             // 
             // LblRamTitle
             // 
@@ -121,124 +125,6 @@
             this.PnlRegisters.Name = "PnlRegisters";
             this.PnlRegisters.Size = new System.Drawing.Size(514, 90);
             this.PnlRegisters.TabIndex = 4;
-            // 
-            // LblRegistersTitle
-            // 
-            this.LblRegistersTitle.AutoSize = true;
-            this.LblRegistersTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRegistersTitle.Location = new System.Drawing.Point(25, 54);
-            this.LblRegistersTitle.Name = "LblRegistersTitle";
-            this.LblRegistersTitle.Size = new System.Drawing.Size(110, 16);
-            this.LblRegistersTitle.TabIndex = 5;
-            this.LblRegistersTitle.Text = "Registers / Flags";
-            // 
-            // PnlRegisterValues
-            // 
-            this.PnlRegisterValues.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PnlRegisterValues.Controls.Add(this.LblFlagC);
-            this.PnlRegisterValues.Location = new System.Drawing.Point(20, 38);
-            this.PnlRegisterValues.Name = "PnlRegisterValues";
-            this.PnlRegisterValues.Size = new System.Drawing.Size(474, 38);
-            this.PnlRegisterValues.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(338, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Z";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(397, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "C";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(458, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "F";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(224, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 22);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "IP";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblD
-            // 
-            this.LblD.AutoSize = true;
-            this.LblD.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblD.Location = new System.Drawing.Point(180, 15);
-            this.LblD.Name = "LblD";
-            this.LblD.Size = new System.Drawing.Size(21, 23);
-            this.LblD.TabIndex = 6;
-            this.LblD.Text = "D";
-            this.LblD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblC
-            // 
-            this.LblC.AutoSize = true;
-            this.LblC.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblC.Location = new System.Drawing.Point(132, 15);
-            this.LblC.Name = "LblC";
-            this.LblC.Size = new System.Drawing.Size(21, 23);
-            this.LblC.TabIndex = 7;
-            this.LblC.Text = "C";
-            this.LblC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblB
-            // 
-            this.LblB.AutoSize = true;
-            this.LblB.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblB.Location = new System.Drawing.Point(84, 15);
-            this.LblB.Name = "LblB";
-            this.LblB.Size = new System.Drawing.Size(21, 23);
-            this.LblB.TabIndex = 8;
-            this.LblB.Text = "B";
-            this.LblB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblA
-            // 
-            this.LblA.AutoSize = true;
-            this.LblA.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblA.Location = new System.Drawing.Point(36, 15);
-            this.LblA.Name = "LblA";
-            this.LblA.Size = new System.Drawing.Size(21, 23);
-            this.LblA.TabIndex = 9;
-            this.LblA.Text = "A";
-            this.LblA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(272, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 22);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "SP";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblValveB
             // 
@@ -326,6 +212,114 @@
             this.LblFlagZ.Text = "False";
             this.LblFlagZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // LblB
+            // 
+            this.LblB.AutoSize = true;
+            this.LblB.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblB.Location = new System.Drawing.Point(84, 15);
+            this.LblB.Name = "LblB";
+            this.LblB.Size = new System.Drawing.Size(21, 23);
+            this.LblB.TabIndex = 8;
+            this.LblB.Text = "B";
+            this.LblB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblA
+            // 
+            this.LblA.AutoSize = true;
+            this.LblA.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblA.Location = new System.Drawing.Point(36, 15);
+            this.LblA.Name = "LblA";
+            this.LblA.Size = new System.Drawing.Size(21, 23);
+            this.LblA.TabIndex = 9;
+            this.LblA.Text = "A";
+            this.LblA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblC
+            // 
+            this.LblC.AutoSize = true;
+            this.LblC.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblC.Location = new System.Drawing.Point(132, 15);
+            this.LblC.Name = "LblC";
+            this.LblC.Size = new System.Drawing.Size(21, 23);
+            this.LblC.TabIndex = 7;
+            this.LblC.Text = "C";
+            this.LblC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(224, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 22);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "IP";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblD
+            // 
+            this.LblD.AutoSize = true;
+            this.LblD.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblD.Location = new System.Drawing.Point(180, 15);
+            this.LblD.Name = "LblD";
+            this.LblD.Size = new System.Drawing.Size(21, 23);
+            this.LblD.TabIndex = 6;
+            this.LblD.Text = "D";
+            this.LblD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(272, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 22);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "SP";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(458, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 23);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "F";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(397, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "C";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(338, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Z";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PnlRegisterValues
+            // 
+            this.PnlRegisterValues.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PnlRegisterValues.Controls.Add(this.LblFlagC);
+            this.PnlRegisterValues.Location = new System.Drawing.Point(20, 38);
+            this.PnlRegisterValues.Name = "PnlRegisterValues";
+            this.PnlRegisterValues.Size = new System.Drawing.Size(474, 38);
+            this.PnlRegisterValues.TabIndex = 0;
+            // 
             // LblFlagC
             // 
             this.LblFlagC.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,20 +330,70 @@
             this.LblFlagC.Text = "False";
             this.LblFlagC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // LblRegistersTitle
+            // 
+            this.LblRegistersTitle.AutoSize = true;
+            this.LblRegistersTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRegistersTitle.Location = new System.Drawing.Point(25, 54);
+            this.LblRegistersTitle.Name = "LblRegistersTitle";
+            this.LblRegistersTitle.Size = new System.Drawing.Size(110, 16);
+            this.LblRegistersTitle.TabIndex = 5;
+            this.LblRegistersTitle.Text = "Registers / Flags";
+            // 
+            // TxtSetAddress
+            // 
+            this.TxtSetAddress.Location = new System.Drawing.Point(561, 301);
+            this.TxtSetAddress.Name = "TxtSetAddress";
+            this.TxtSetAddress.Size = new System.Drawing.Size(75, 22);
+            this.TxtSetAddress.TabIndex = 6;
+            this.TxtSetAddress.Text = "55";
+            this.TxtSetAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtSetValue
+            // 
+            this.TxtSetValue.Location = new System.Drawing.Point(561, 328);
+            this.TxtSetValue.Name = "TxtSetValue";
+            this.TxtSetValue.Size = new System.Drawing.Size(75, 22);
+            this.TxtSetValue.TabIndex = 7;
+            this.TxtSetValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtGetValue
+            // 
+            this.TxtGetValue.Location = new System.Drawing.Point(668, 328);
+            this.TxtGetValue.Name = "TxtGetValue";
+            this.TxtGetValue.ReadOnly = true;
+            this.TxtGetValue.Size = new System.Drawing.Size(75, 22);
+            this.TxtGetValue.TabIndex = 9;
+            this.TxtGetValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtGetAddress
+            // 
+            this.TxtGetAddress.Location = new System.Drawing.Point(668, 301);
+            this.TxtGetAddress.Name = "TxtGetAddress";
+            this.TxtGetAddress.Size = new System.Drawing.Size(75, 22);
+            this.TxtGetAddress.TabIndex = 8;
+            this.TxtGetAddress.Text = "55";
+            this.TxtGetAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmAssembler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 712);
+            this.ClientSize = new System.Drawing.Size(771, 712);
+            this.Controls.Add(this.TxtGetValue);
+            this.Controls.Add(this.TxtGetAddress);
+            this.Controls.Add(this.TxtSetValue);
+            this.Controls.Add(this.TxtSetAddress);
             this.Controls.Add(this.LblRegistersTitle);
             this.Controls.Add(this.PnlRegisters);
             this.Controls.Add(this.LblRamTitle);
-            this.Controls.Add(this.BtnGet32);
-            this.Controls.Add(this.BtnSet32);
+            this.Controls.Add(this.BtnGet);
+            this.Controls.Add(this.BtnSet);
             this.Controls.Add(this.FlwRam);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAssembler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pseudo Eight Bit Assembler   by   Joseph Fischetti";
             this.Load += new System.EventHandler(this.FrmAssembler_Load);
             this.PnlRegisters.ResumeLayout(false);
@@ -363,8 +407,8 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel FlwRam;
-        private System.Windows.Forms.Button BtnSet32;
-        private System.Windows.Forms.Button BtnGet32;
+        private System.Windows.Forms.Button BtnSet;
+        private System.Windows.Forms.Button BtnGet;
         private System.Windows.Forms.Label LblRamTitle;
         private System.Windows.Forms.Panel PnlRegisters;
         private System.Windows.Forms.Label LblRegistersTitle;
@@ -387,6 +431,10 @@
         private System.Windows.Forms.Label LblFlagF;
         private System.Windows.Forms.Label LblFlagZ;
         private System.Windows.Forms.Label LblFlagC;
+        private System.Windows.Forms.TextBox TxtSetAddress;
+        private System.Windows.Forms.TextBox TxtSetValue;
+        private System.Windows.Forms.TextBox TxtGetValue;
+        private System.Windows.Forms.TextBox TxtGetAddress;
     }
 }
 
