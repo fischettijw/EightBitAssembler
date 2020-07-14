@@ -52,8 +52,8 @@ namespace EightBitAssembler
                 LblAddress[nAddress].Font = new Font("Courier New", 14);
                 LblAddress[nAddress].ForeColor = Color.Black;
 
-                LblAddress[nAddress].Text = (ramValue[nAddress] < 16 ? "0" : "") +
-                                            Convert.ToString(Convert.ToByte(ramValue[nAddress]), 16).ToUpper();
+                //LblAddress[nAddress].Text = (ramValue[nAddress] < 16 ? "0" : "") +
+                //                            Convert.ToString(Convert.ToByte(ramValue[nAddress]), 16).ToUpper();
                 LblAddress[nAddress].Text = "00";
 
                 LblAddress[nAddress].TextAlign = ContentAlignment.MiddleCenter;
