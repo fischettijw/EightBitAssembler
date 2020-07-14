@@ -40,7 +40,6 @@ namespace EightBitAssembler
         private void BtnGet_Click(object sender, EventArgs e)
         {
             TxtGetValue.Text = SimDisplay.GetRamValue(Convert.ToInt32(TxtGetAddress.Text)).ToString();
-
         }
 
     }
