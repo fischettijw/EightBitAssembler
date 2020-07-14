@@ -22,5 +22,15 @@ namespace EightBitAssembler
         {
             SimDisplay = new SimulatorDisplay(FlwRam);
         }
+
+        private void BtnSet32_Click(object sender, EventArgs e)
+        {
+            SimDisplay.SetRamValue(32, "64");
+        }
+
+        private void BtnGet32_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(SimDisplay.GetRamValue(32));
+        }
     }
 }

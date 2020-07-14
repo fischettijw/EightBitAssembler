@@ -10,7 +10,6 @@ namespace EightBitAssembler
 {
     class SimulatorDisplay
     {
-
         private FlowLayoutPanel ramPanel;
         private int ramAddress;
         private string tempText;
@@ -35,6 +34,7 @@ namespace EightBitAssembler
             InitializeRam();
             CreateRamDisplay();
         }
+
         private void InitializeRam()
         {
             for (int n = 0; n < ramValue.Length; n++)
@@ -57,39 +57,53 @@ namespace EightBitAssembler
                 LblAddress[nAddress].Margin = new Padding(0);
                 LblAddress[nAddress].Font = new Font("Courier New", 14);
                 LblAddress[nAddress].ForeColor = Color.Black;
+
                 LblAddress[nAddress].Text = (ramValue[nAddress] < 16 ? "0" : "") +
                                             Convert.ToString(Convert.ToByte(ramValue[nAddress]), 16).ToUpper();
                 LblAddress[nAddress].Text = "00";
+
                 LblAddress[nAddress].TextAlign = ContentAlignment.MiddleCenter;
                 LblAddress[nAddress].Tag = nAddress;
                 RamPanel.Controls.Add(LblAddress[nAddress]);
-                LblAddress[nAddress].Click += new EventHandler(click);
-                LblAddress[nAddress].MouseHover += new EventHandler(hoover);
-
+                LblAddress[nAddress].MouseDown += new MouseEventHandler(MouseDown);
+                LblAddress[nAddress].MouseUp += new MouseEventHandler(MouseUp);
             }
         }
 
-        private void hoover(object sender, EventArgs e)
+        private void MouseUp(object sender, MouseEventArgs e)
         {
             Label lbl = (Label)sender;
-            lbl.ForeColor = Color.Green;
-            lbl.Text = Convert.ToChar(lbl.Tag).ToString();
+            lbl.ForeColor = Color.Black;
+            lbl.Text = tempText;
         }
 
-        private void click(object sender, EventArgs e)
+        private void MouseDown(object sender, MouseEventArgs e)
         {
             Label lbl = (Label)sender;
-            if (lbl.ForeColor == Color.Black)
+            tempText = lbl.Text;
+            if (e.Button == MouseButtons.Left)
             {
-                tempText = lbl.Text;
-                lbl.ForeColor = Color.Red;
-                lbl.Text = (Convert.ToInt32(lbl.Tag) < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(Convert.ToInt32(lbl.Tag)), 16).ToUpper();
+                lbl.ForeColor = Color.Green;
+                lbl.Text = Convert.ToChar(lbl.Tag).ToString();
             }
             else
             {
-                lbl.Text = tempText;
-                lbl.ForeColor = Color.Black;
+                lbl.ForeColor = Color.Red;
+                lbl.Text = (Convert.ToInt32(lbl.Tag) < 16 ? "0" : "") + Convert.ToString(Convert.ToByte(Convert.ToInt32(lbl.Tag)), 16).ToUpper();
             }
         }
+
+        public string GetRamValue(int add)
+        {
+            return LblAddress[add].Text;
+            //return ramValue[add].ToString();
+        }
+
+        public void SetRamValue(int add, string value)
+        {
+            LblAddress[add].Text = value;
+            //ramValue[add] = Convert.ToByte(value);
+        }
+
     }
 }
