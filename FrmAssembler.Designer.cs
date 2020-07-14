@@ -145,7 +145,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(348, 15);
+            this.label2.Location = new System.Drawing.Point(338, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 23);
             this.label2.TabIndex = 2;
@@ -156,7 +156,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(402, 15);
+            this.label3.Location = new System.Drawing.Point(397, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 23);
             this.label3.TabIndex = 3;
@@ -178,7 +178,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(239, 15);
+            this.label5.Location = new System.Drawing.Point(224, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 22);
             this.label5.TabIndex = 5;
@@ -189,7 +189,7 @@
             // 
             this.LblD.AutoSize = true;
             this.LblD.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblD.Location = new System.Drawing.Point(188, 15);
+            this.LblD.Location = new System.Drawing.Point(180, 15);
             this.LblD.Name = "LblD";
             this.LblD.Size = new System.Drawing.Size(21, 23);
             this.LblD.TabIndex = 6;
@@ -200,7 +200,7 @@
             // 
             this.LblC.AutoSize = true;
             this.LblC.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblC.Location = new System.Drawing.Point(140, 15);
+            this.LblC.Location = new System.Drawing.Point(132, 15);
             this.LblC.Name = "LblC";
             this.LblC.Size = new System.Drawing.Size(21, 23);
             this.LblC.TabIndex = 7;
@@ -211,7 +211,7 @@
             // 
             this.LblB.AutoSize = true;
             this.LblB.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblB.Location = new System.Drawing.Point(92, 15);
+            this.LblB.Location = new System.Drawing.Point(84, 15);
             this.LblB.Name = "LblB";
             this.LblB.Size = new System.Drawing.Size(21, 23);
             this.LblB.TabIndex = 8;
@@ -222,7 +222,7 @@
             // 
             this.LblA.AutoSize = true;
             this.LblA.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblA.Location = new System.Drawing.Point(44, 15);
+            this.LblA.Location = new System.Drawing.Point(36, 15);
             this.LblA.Name = "LblA";
             this.LblA.Size = new System.Drawing.Size(21, 23);
             this.LblA.TabIndex = 9;
@@ -233,7 +233,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 15);
+            this.label1.Location = new System.Drawing.Point(272, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 22);
             this.label1.TabIndex = 10;
@@ -244,7 +244,7 @@
             // 
             this.LblValveB.AutoSize = true;
             this.LblValveB.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblValveB.Location = new System.Drawing.Point(90, 49);
+            this.LblValveB.Location = new System.Drawing.Point(78, 49);
             this.LblValveB.Name = "LblValveB";
             this.LblValveB.Size = new System.Drawing.Size(32, 21);
             this.LblValveB.TabIndex = 17;
@@ -255,7 +255,7 @@
             // 
             this.LblValveA.AutoSize = true;
             this.LblValveA.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblValveA.Location = new System.Drawing.Point(38, 49);
+            this.LblValveA.Location = new System.Drawing.Point(30, 49);
             this.LblValveA.Name = "LblValveA";
             this.LblValveA.Size = new System.Drawing.Size(32, 21);
             this.LblValveA.TabIndex = 18;
@@ -266,7 +266,7 @@
             // 
             this.LblValveC.AutoSize = true;
             this.LblValveC.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblValveC.Location = new System.Drawing.Point(142, 49);
+            this.LblValveC.Location = new System.Drawing.Point(126, 49);
             this.LblValveC.Name = "LblValveC";
             this.LblValveC.Size = new System.Drawing.Size(32, 21);
             this.LblValveC.TabIndex = 16;
@@ -277,7 +277,7 @@
             // 
             this.LblValveIP.AutoSize = true;
             this.LblValveIP.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblValveIP.Location = new System.Drawing.Point(235, 49);
+            this.LblValveIP.Location = new System.Drawing.Point(220, 49);
             this.LblValveIP.Name = "LblValveIP";
             this.LblValveIP.Size = new System.Drawing.Size(32, 21);
             this.LblValveIP.TabIndex = 14;
@@ -288,7 +288,7 @@
             // 
             this.LblValveD.AutoSize = true;
             this.LblValveD.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblValveD.Location = new System.Drawing.Point(184, 49);
+            this.LblValveD.Location = new System.Drawing.Point(174, 49);
             this.LblValveD.Name = "LblValveD";
             this.LblValveD.Size = new System.Drawing.Size(32, 21);
             this.LblValveD.TabIndex = 15;
@@ -299,7 +299,7 @@
             // 
             this.LblValveSP.AutoSize = true;
             this.LblValveSP.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblValveSP.Location = new System.Drawing.Point(287, 49);
+            this.LblValveSP.Location = new System.Drawing.Point(272, 49);
             this.LblValveSP.Name = "LblValveSP";
             this.LblValveSP.Size = new System.Drawing.Size(32, 21);
             this.LblValveSP.TabIndex = 19;
@@ -308,32 +308,32 @@
             // 
             // LblFlagF
             // 
-            this.LblFlagF.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFlagF.Location = new System.Drawing.Point(440, 45);
+            this.LblFlagF.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFlagF.Location = new System.Drawing.Point(435, 45);
             this.LblFlagF.Name = "LblFlagF";
-            this.LblFlagF.Size = new System.Drawing.Size(55, 27);
+            this.LblFlagF.Size = new System.Drawing.Size(65, 27);
             this.LblFlagF.TabIndex = 13;
-            this.LblFlagF.Text = "True";
+            this.LblFlagF.Text = "False";
             this.LblFlagF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblFlagZ
             // 
-            this.LblFlagZ.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFlagZ.Location = new System.Drawing.Point(330, 46);
+            this.LblFlagZ.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFlagZ.Location = new System.Drawing.Point(315, 46);
             this.LblFlagZ.Name = "LblFlagZ";
-            this.LblFlagZ.Size = new System.Drawing.Size(55, 27);
+            this.LblFlagZ.Size = new System.Drawing.Size(65, 27);
             this.LblFlagZ.TabIndex = 11;
-            this.LblFlagZ.Text = "True";
+            this.LblFlagZ.Text = "False";
             this.LblFlagZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblFlagC
             // 
-            this.LblFlagC.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFlagC.Location = new System.Drawing.Point(363, 6);
+            this.LblFlagC.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFlagC.Location = new System.Drawing.Point(353, 6);
             this.LblFlagC.Name = "LblFlagC";
-            this.LblFlagC.Size = new System.Drawing.Size(55, 27);
+            this.LblFlagC.Size = new System.Drawing.Size(65, 27);
             this.LblFlagC.TabIndex = 14;
-            this.LblFlagC.Text = "True";
+            this.LblFlagC.Text = "False";
             this.LblFlagC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmAssembler

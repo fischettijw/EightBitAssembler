@@ -26,6 +26,15 @@ namespace EightBitAssembler
         private void BtnSet32_Click(object sender, EventArgs e)
         {
             SimDisplay.SetRamValue(32, "44");
+            LblValveA.Text = "0A";
+            LblValveB.Text = "0B";
+            LblValveC.Text = "0C";
+            LblValveD.Text = "0D";
+            LblValveIP.Text = "0E";
+            LblValveSP.Text = "0F";
+            LblFlagZ.Text = "True";
+            LblFlagC.Text = "True";
+            LblFlagF.Text = "True";
         }
 
         private void BtnGet32_Click(object sender, EventArgs e)
