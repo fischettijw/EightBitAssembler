@@ -57,24 +57,30 @@
             this.TxtSetValue = new System.Windows.Forms.TextBox();
             this.TxtGetValue = new System.Windows.Forms.TextBox();
             this.TxtGetAddress = new System.Windows.Forms.TextBox();
+            this.LblCodeTitle = new System.Windows.Forms.Label();
+            this.PnlCode = new System.Windows.Forms.Panel();
+            this.LbxCode = new System.Windows.Forms.ListBox();
+            this.BtnAddRow = new System.Windows.Forms.Button();
             this.PnlRegisters.SuspendLayout();
             this.PnlRegisterValues.SuspendLayout();
+            this.PnlCode.SuspendLayout();
             this.SuspendLayout();
             // 
             // FlwRam
             // 
+            this.FlwRam.BackColor = System.Drawing.SystemColors.Control;
             this.FlwRam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FlwRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FlwRam.Location = new System.Drawing.Point(20, 174);
+            this.FlwRam.Location = new System.Drawing.Point(597, 179);
             this.FlwRam.Name = "FlwRam";
             this.FlwRam.Size = new System.Drawing.Size(514, 514);
             this.FlwRam.TabIndex = 0;
             // 
             // BtnSet
             // 
-            this.BtnSet.Location = new System.Drawing.Point(561, 356);
+            this.BtnSet.Location = new System.Drawing.Point(542, 198);
             this.BtnSet.Name = "BtnSet";
-            this.BtnSet.Size = new System.Drawing.Size(75, 23);
+            this.BtnSet.Size = new System.Drawing.Size(46, 23);
             this.BtnSet.TabIndex = 1;
             this.BtnSet.Text = "SET";
             this.BtnSet.UseVisualStyleBackColor = true;
@@ -82,9 +88,9 @@
             // 
             // BtnGet
             // 
-            this.BtnGet.Location = new System.Drawing.Point(668, 356);
+            this.BtnGet.Location = new System.Drawing.Point(542, 345);
             this.BtnGet.Name = "BtnGet";
-            this.BtnGet.Size = new System.Drawing.Size(75, 23);
+            this.BtnGet.Size = new System.Drawing.Size(46, 23);
             this.BtnGet.TabIndex = 2;
             this.BtnGet.Text = "GET";
             this.BtnGet.UseVisualStyleBackColor = true;
@@ -94,7 +100,7 @@
             // 
             this.LblRamTitle.AutoSize = true;
             this.LblRamTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRamTitle.Location = new System.Drawing.Point(25, 164);
+            this.LblRamTitle.Location = new System.Drawing.Point(602, 169);
             this.LblRamTitle.Name = "LblRamTitle";
             this.LblRamTitle.Size = new System.Drawing.Size(37, 16);
             this.LblRamTitle.TabIndex = 3;
@@ -121,7 +127,7 @@
             this.PnlRegisters.Controls.Add(this.label3);
             this.PnlRegisters.Controls.Add(this.label2);
             this.PnlRegisters.Controls.Add(this.PnlRegisterValues);
-            this.PnlRegisters.Location = new System.Drawing.Point(20, 64);
+            this.PnlRegisters.Location = new System.Drawing.Point(597, 69);
             this.PnlRegisters.Name = "PnlRegisters";
             this.PnlRegisters.Size = new System.Drawing.Size(514, 90);
             this.PnlRegisters.TabIndex = 4;
@@ -334,7 +340,7 @@
             // 
             this.LblRegistersTitle.AutoSize = true;
             this.LblRegistersTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRegistersTitle.Location = new System.Drawing.Point(25, 54);
+            this.LblRegistersTitle.Location = new System.Drawing.Point(602, 59);
             this.LblRegistersTitle.Name = "LblRegistersTitle";
             this.LblRegistersTitle.Size = new System.Drawing.Size(110, 16);
             this.LblRegistersTitle.TabIndex = 5;
@@ -342,44 +348,87 @@
             // 
             // TxtSetAddress
             // 
-            this.TxtSetAddress.Location = new System.Drawing.Point(561, 301);
+            this.TxtSetAddress.Location = new System.Drawing.Point(542, 226);
             this.TxtSetAddress.Name = "TxtSetAddress";
-            this.TxtSetAddress.Size = new System.Drawing.Size(75, 22);
+            this.TxtSetAddress.Size = new System.Drawing.Size(46, 22);
             this.TxtSetAddress.TabIndex = 6;
             this.TxtSetAddress.Text = "55";
             this.TxtSetAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtSetValue
             // 
-            this.TxtSetValue.Location = new System.Drawing.Point(561, 328);
+            this.TxtSetValue.Location = new System.Drawing.Point(542, 253);
             this.TxtSetValue.Name = "TxtSetValue";
-            this.TxtSetValue.Size = new System.Drawing.Size(75, 22);
+            this.TxtSetValue.Size = new System.Drawing.Size(46, 22);
             this.TxtSetValue.TabIndex = 7;
             this.TxtSetValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtGetValue
             // 
-            this.TxtGetValue.Location = new System.Drawing.Point(668, 328);
+            this.TxtGetValue.Location = new System.Drawing.Point(542, 401);
             this.TxtGetValue.Name = "TxtGetValue";
             this.TxtGetValue.ReadOnly = true;
-            this.TxtGetValue.Size = new System.Drawing.Size(75, 22);
+            this.TxtGetValue.Size = new System.Drawing.Size(46, 22);
             this.TxtGetValue.TabIndex = 9;
             this.TxtGetValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtGetAddress
             // 
-            this.TxtGetAddress.Location = new System.Drawing.Point(668, 301);
+            this.TxtGetAddress.Location = new System.Drawing.Point(542, 374);
             this.TxtGetAddress.Name = "TxtGetAddress";
-            this.TxtGetAddress.Size = new System.Drawing.Size(75, 22);
+            this.TxtGetAddress.Size = new System.Drawing.Size(46, 22);
             this.TxtGetAddress.TabIndex = 8;
             this.TxtGetAddress.Text = "55";
             this.TxtGetAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LblCodeTitle
+            // 
+            this.LblCodeTitle.AutoSize = true;
+            this.LblCodeTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCodeTitle.Location = new System.Drawing.Point(24, 169);
+            this.LblCodeTitle.Name = "LblCodeTitle";
+            this.LblCodeTitle.Size = new System.Drawing.Size(41, 16);
+            this.LblCodeTitle.TabIndex = 11;
+            this.LblCodeTitle.Text = "Code";
+            // 
+            // PnlCode
+            // 
+            this.PnlCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCode.Controls.Add(this.LbxCode);
+            this.PnlCode.Location = new System.Drawing.Point(17, 179);
+            this.PnlCode.Name = "PnlCode";
+            this.PnlCode.Size = new System.Drawing.Size(514, 514);
+            this.PnlCode.TabIndex = 12;
+            // 
+            // LbxCode
+            // 
+            this.LbxCode.BackColor = System.Drawing.SystemColors.Control;
+            this.LbxCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LbxCode.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbxCode.FormattingEnabled = true;
+            this.LbxCode.ItemHeight = 21;
+            this.LbxCode.Location = new System.Drawing.Point(-1, 8);
+            this.LbxCode.Name = "LbxCode";
+            this.LbxCode.Size = new System.Drawing.Size(510, 504);
+            this.LbxCode.TabIndex = 0;
+            // 
+            // BtnAddRow
+            // 
+            this.BtnAddRow.Location = new System.Drawing.Point(171, 67);
+            this.BtnAddRow.Name = "BtnAddRow";
+            this.BtnAddRow.Size = new System.Drawing.Size(75, 23);
+            this.BtnAddRow.TabIndex = 13;
+            this.BtnAddRow.Text = "Add Row";
+            this.BtnAddRow.UseVisualStyleBackColor = true;
+            this.BtnAddRow.Click += new System.EventHandler(this.BtnAddRow_Click);
             // 
             // FrmAssembler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 712);
+            this.ClientSize = new System.Drawing.Size(1129, 712);
+            this.Controls.Add(this.BtnAddRow);
+            this.Controls.Add(this.LblCodeTitle);
             this.Controls.Add(this.TxtGetValue);
             this.Controls.Add(this.TxtGetAddress);
             this.Controls.Add(this.TxtSetValue);
@@ -390,6 +439,7 @@
             this.Controls.Add(this.BtnGet);
             this.Controls.Add(this.BtnSet);
             this.Controls.Add(this.FlwRam);
+            this.Controls.Add(this.PnlCode);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAssembler";
@@ -399,6 +449,7 @@
             this.PnlRegisters.ResumeLayout(false);
             this.PnlRegisters.PerformLayout();
             this.PnlRegisterValues.ResumeLayout(false);
+            this.PnlCode.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,6 +486,10 @@
         private System.Windows.Forms.TextBox TxtSetValue;
         private System.Windows.Forms.TextBox TxtGetValue;
         private System.Windows.Forms.TextBox TxtGetAddress;
+        private System.Windows.Forms.Label LblCodeTitle;
+        private System.Windows.Forms.Panel PnlCode;
+        private System.Windows.Forms.ListBox LbxCode;
+        private System.Windows.Forms.Button BtnAddRow;
     }
 }
 
